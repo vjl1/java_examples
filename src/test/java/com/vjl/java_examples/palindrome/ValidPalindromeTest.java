@@ -26,11 +26,14 @@ class ValidPalindromeTest {
   }
 
   @Test
-  void iisPalindromeCompareCharAndDigitWithSkips(){
-    assertThat(i.isPalindromeCompareCharAndDigitWithSkips("A man, a plan, a canal: Panama", 0)).isTrue();
-//    assertThat(i.isPalindromeCompareCharAndDigitWithSkips("A a")).isTrue();
-//    assertThat(i.isPalindromeCompareCharAndDigitWithSkips("")).isTrue();
-//    assertThat(i.isPalindromeCompareCharAndDigitWithSkips(" ")).isTrue();
+  void isPalindromeCompareCharAndDigitWithOneSkip(){
+    assertThat(i.isPalindromeCompareCharAndDigitWithOneSkip("A man, a plan, a canal: Panama")).isTrue();
+    assertThat(i.isPalindromeCompareCharAndDigitWithOneSkip("aba")).isTrue();
+    assertThat(i.isPalindromeCompareCharAndDigitWithOneSkip("A a")).isTrue();
+    assertThat(i.isPalindromeCompareCharAndDigitWithOneSkip("")).isTrue();
+    assertThat(i.isPalindromeCompareCharAndDigitWithOneSkip(" ")).isTrue();
+    assertThat(i.isPalindromeCompareCharAndDigitWithOneSkip("abca")).isTrue();
+    assertThat(i.isPalindromeCompareCharAndDigitWithOneSkip("abc")).isFalse();
   }
 
 }
